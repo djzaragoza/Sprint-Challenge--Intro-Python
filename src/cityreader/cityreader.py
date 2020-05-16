@@ -25,15 +25,15 @@ class City:
 # should not be loaded into a City object.
 cities = []
 
-def cityreader(cities=[]):
-     with open('cities.csv') as csvfile:
-       reader = csv.DictReader(csvfile)
-       for row in reader:
-            cities.append(City(row['city'], float(row['lat']), float(['lng'])))
+def cityreader(cities=[]): 
+  with open('cities.csv') as csvfile: 
+    reader = csv.DictReader(csvfile) 
+    for row in reader: 
+      cities.append(City(row['city'], float(row['lat']), float(row['lng'])))
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list 
-     return cities
+  return cities
 
 cityreader(cities)
 
